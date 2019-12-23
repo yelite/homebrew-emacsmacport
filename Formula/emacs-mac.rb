@@ -79,11 +79,9 @@ class EmacsMac < Formula
     end
   end
 
-  if build.with? "natural-title-bar"
-    patch do
-      url "https://gist.github.com/lululau/f2e6314a14cc95586721272dd85a7c51/raw/f5a92d3e654cc41d0eab2b229a98ed63da82ee1c/emacs-mac-title-bar-7.4.patch"
-      sha256 '5512577b3495ed10442883e79b2ec1c8a1325495698eee8c1f0a0d90574de897'
-    end
+  patch do
+    url "https://gist.githubusercontent.com/yelite/33850760bd1a705fcc43a05d707969f8/raw/2f4c5f6522372285dca58038e7779d1d1300ff8d/emacs-mac-26.3-19c9708-transparent-title-bar-frame-parameters.patch"
+    sha256 "c823e733b6ebf02984cea4395101b40d659e0c47018abe1f33f406590d7e977b"
   end
 
   def install
