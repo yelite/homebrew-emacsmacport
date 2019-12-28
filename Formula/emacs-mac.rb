@@ -84,6 +84,11 @@ class EmacsMac < Formula
     sha256 "c823e733b6ebf02984cea4395101b40d659e0c47018abe1f33f406590d7e977b"
   end
 
+  patch do
+    url "https://gist.githubusercontent.com/yelite/508a6a664ad9faf69c495cbc8d06acf1/raw/bf595209cf1f73ac8a213098793f922521484cbc/center-line-spacing.patch"
+    sha256 "0de197a66ef6c81bbf106dd2813a051e9a8f273ab8d7f371c4f8162714804d36"
+  end
+
   def install
     args = [
       "--enable-locallisppath=#{HOMEBREW_PREFIX}/share/emacs/site-lisp",
